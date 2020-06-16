@@ -49,7 +49,7 @@ html {
 body {
   color: #5E5C7F;
   background-color: #F9F9FF;
-  font-family: "Rubik", sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 16px;
   line-height: 1.7;
   overflow-x: hidden;
@@ -83,7 +83,7 @@ img {
 /*=================================================================*/
 h1, h2, h3, h4, h5, h6 {
   color: #454360;
-  font-family: "Rubik", sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 700;
   margin: 20px 0;
 }
@@ -851,10 +851,12 @@ section.home.light .social-icons li a:hover {
 
 .section-title {
   font-size: 36px;
+  font-weight: bold;
   margin: 0;
   margin-left: 14px;
   position: relative;
 }
+
 .section-title:before {
   content: "";
   background-image: url(../images/dots-bg.svg);
