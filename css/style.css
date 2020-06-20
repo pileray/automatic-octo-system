@@ -541,7 +541,7 @@ header.desktop-header-2 .vertical-menu li i {
 }
 header.desktop-header-2 .vertical-menu li a {
   color: #FFF;
-  font-family: "Rubik", sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 24px;
   font-weight: 700;
   width: 100%;
@@ -1059,7 +1059,7 @@ section.home.light .social-icons li a:hover {
 .portfolio-filter li {
   color: #5E5C7F;
   cursor: pointer;
-  font-family: "Rubik", sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 16px;
   font-weight: 700;
   position: relative;
@@ -1332,7 +1332,7 @@ select.portfolio-filter-mobile {
 }
 
 .text-link {
-  font-family: "Rubik", sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1523,7 +1523,7 @@ body.dark footer.footer {
 /*=================================================================*/
 .btn {
   border-radius: 30px;
-  font-family: "Rubik", sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 16px;
   font-weight: 700;
   overflow: hidden;

@@ -4,10 +4,10 @@
  */
 
 // an email address that will be in the From field of the email.
-$from = 'Demo contact form <sender@yourdomain.com>';
+$from = 'ryosuke.fukui.request@gmail.com';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'Demo contact form <reciever@example.com>';
+$sendTo = 'ryosuke.fukui.request@gmail.com';
 
 // subject of the email
 $subject = 'New message from contact form';
@@ -26,7 +26,7 @@ $errorMessage = 'There was an error while submitting the form. Please try again 
  *  LET'S DO THE SENDING
  */
 
-// if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
+// if you are not debugging and don't need error reporting, turn this off by error_reporting(0)
 error_reporting(E_ALL & ~E_NOTICE);
 
 try
