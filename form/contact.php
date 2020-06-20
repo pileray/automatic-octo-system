@@ -2,32 +2,35 @@
 /*
  *  CONFIGURE EVERYTHING HERE
  */
+mb_language("Japanese");
+mb_internal_encoding("UTF-8");
 
 // an email address that will be in the From field of the email.
-$from = 'ryosuke.fukui.request@gmail.com';
+$from = 'request@example.com';
 
 // an email address that will receive the email with the output of the form
 $sendTo = 'ryosuke.fukui.request@gmail.com';
 
 // subject of the email
-$subject = 'New message from contact form';
+$subject = 'コンタクトフォームからの新規メッセージ';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
 $fields = array('InputName' => 'Name', 'InputEmail' => 'Email', 'InputSubject' => 'Subject', 'InputMessage' => 'Message'); 
 
 // message that will be displayed when everything is OK :)
-$okMessage = 'Your message successfully submitted. Thank you, I will get back to you soon!';
+$okMessage = 'ご相談内容が正常に送信されました！ご返信までしばらくお待ち下さい。';
 
 // If something goes wrong, we will display this message.
-$errorMessage = 'There was an error while submitting the form. Please try again later';
+$errorMessage = '送信時にエラーが発生しました。しばらく経ってからもう一度お試しください。';
 
 /*
  *  LET'S DO THE SENDING
  */
 
-// if you are not debugging and don't need error reporting, turn this off by error_reporting(0)
-error_reporting(E_ALL & ~E_NOTICE);
+// if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
+// error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(0);
 
 try
 {
@@ -44,14 +47,10 @@ try
     }
 
     // All the neccessary headers for the email.
-    $headers = array('Content-Type: text/plain; charset="UTF-8";',
-        'From: ' . $from,
-        'Reply-To: ' . $from,
-        'Return-Path: ' . $from,
-    );
+    $headers = 'From: '. $from;
     
     // Send email
-    mail($sendTo, $subject, $emailText, implode("\n", $headers));
+    mb_send_mail($sendTo, $subject, $emailText, $headers);
 
     $responseArray = array('type' => 'success', 'message' => $okMessage);
 }
@@ -73,3 +72,5 @@ if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQ
 else {
     echo $responseArray['message'];
 }
+
+?>
